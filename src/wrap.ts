@@ -175,7 +175,16 @@ export function renderWrap(element: HTMLElement, s: HeadlessState, relative: boo
       coordinatesContainer.appendChild(renderCoords(['c', '', 'i'], 'ranks' + orientClass + ' file-4'));
       coordinatesContainer.appendChild(renderCoords(['b', '', '', '', 'j'], 'ranks' + orientClass + ' file-5'));
       coordinatesContainer.appendChild(renderCoords(['a', '', '', '', '', 'k'], 'ranks' + orientClass + ' file-6'));
-    } else {
+    } else if (s.variant === 'dohyo') {
+		coordinatesContainer.appendChild(renderCoords(ranks.slice(0, 4), 'files' + orientClass + ' rank-1'));
+		coordinatesContainer.appendChild(renderCoords(['5'], 'files' + orientClass + ' rank-2'));
+		coordinatesContainer.appendChild(renderCoords(['6'], 'files' + orientClass + ' rank-3'));
+		coordinatesContainer.appendChild(renderCoords(['7'], 'files' + orientClass + ' rank-4'));
+		coordinatesContainer.appendChild(renderCoords(['d'], 'ranks' + orientClass + ' file-1'));
+		coordinatesContainer.appendChild(renderCoords(['c', 'e'], 'ranks' + orientClass + ' file-2'));
+		coordinatesContainer.appendChild(renderCoords(['b', 'f'], 'ranks' + orientClass + ' file-3'));
+		coordinatesContainer.appendChild(renderCoords(['a', '', 'g'], 'ranks' + orientClass + ' file-4'));
+	} else {
       coordinatesContainer.appendChild(renderCoords(ranks19.slice(0, s.dimensions.height), 'ranks' + orientClass));
       coordinatesContainer.appendChild(renderCoords(files.slice(0, s.dimensions.width), 'files' + orientClass));
     }

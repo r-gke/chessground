@@ -400,6 +400,7 @@ export function roleToSvgName(state: State, piece: DrawShapePiece): string {
     case 'go19x19':
     case 'abalone':
     case 'grandabalone':
+    case 'dohyo':
       return (piece.playerIndex === 'p1' ? 'b' : 'w') + piece.role[0].toUpperCase();
     case 'oware':
     case 'togyzkumalak':

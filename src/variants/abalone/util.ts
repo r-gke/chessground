@@ -132,7 +132,7 @@ export const getSquareDimensions_normed = (_variant: Variant): SquareDimensions 
 };
 
 const getFactor = (variant: Variant): number => {
-	return variant === 'grandabalone'? 0.865: 1;
+	return variant === 'grandabalone'? 0.865: 1;//TODO dohyo
 };
 
 //

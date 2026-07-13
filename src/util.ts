@@ -829,6 +829,7 @@ export const generateCoordinatesClass = (variant: cg.Variant, coords: cg.Coords)
     'nackgammon',
     'abalone',
     'grandabalone',
+    'dohyo',
   ];
   if (coords === cg.Coords.Inside) {
     if (forceOuterCoordsVariants.includes(variant)) return 'outer-coords';

@@ -198,7 +198,7 @@ export function configure(state: HeadlessState, config: Config): void {
   }
 
   // configure variants
-  if (state.variant === 'abalone' || state.variant === 'grandabalone') {
+  if (state.variant === 'abalone' || state.variant === 'grandabalone' || state.variant === 'dohyo') {
     configureAbalone(state);
   }
   if (state.variant === 'backgammon' || state.variant === 'nackgammon' || state.variant === 'hyper') {

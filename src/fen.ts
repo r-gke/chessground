@@ -18,7 +18,7 @@ function letters(role: cg.Role) {
 }
 
 export function read(fen: cg.FEN, dimensions: cg.BoardDimensions, variant: cg.Variant): cg.Pieces {
-  if (variant === 'abalone' || variant === 'grandabalone') return abaloneRead(variant, fen);
+  if (variant === 'abalone' || variant === 'grandabalone' || variant === 'dohyo') return abaloneRead(variant, fen);
   if (variant === 'dameo') return dameoRead(fen);
   if (fen === 'start') fen = initial;
   if (fen.indexOf('[') !== -1) fen = fen.slice(0, fen.indexOf('['));
@@ -149,7 +149,7 @@ export function readPocket(fen: cg.FEN, variant: cg.Variant): cg.Piece[] {
 }
 
 export function write(pieces: cg.Pieces, bd: cg.BoardDimensions, variant: cg.Variant): cg.FEN {
-  if (variant === 'abalone' || variant === 'grandabalone') return abaloneWrite(variant, pieces);
+  if (variant === 'abalone' || variant === 'grandabalone' || variant === 'dohyo') return abaloneWrite(variant, pieces);
   const fen = invNRanks
     .slice(-bd.height)
     .map(y =>

@@ -66,6 +66,7 @@ export type Variant =
   | 'minibreakthroughtroyka'
   | 'abalone'
   | 'grandabalone'
+  | 'dohyo'
   | undefined;
 export type PlayerIndex = (typeof playerIndexs)[number];
 export type Letter = (typeof letters)[number];
@@ -366,7 +367,7 @@ export const chessVariants: Variant[] = [
 export const shogiVariants: Variant[] = ['shogi', 'minishogi', 'kyotoshogi', 'dobutsu', 'gorogoro', 'torishogi'];
 export const xiangqiVariants: Variant[] = ['xiangqi', 'minixiangqi', 'manchu', 'janggi'];
 export const goVariants: Variant[] = ['go9x9', 'go13x13', 'go19x19'];
-export const abaloneVariants: Variant[] = ['abalone', 'grandabalone'];
+export const abaloneVariants: Variant[] = ['abalone', 'grandabalone', 'dohyo'];
 
 export enum Coords {
   // add "const" if you do not want to expose the enum at runtime
