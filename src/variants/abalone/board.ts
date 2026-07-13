@@ -58,7 +58,7 @@ export const getKeyAtDomPos = (
   }
   res = rres;
 
-  if (orientation == 'p2') res = mult(-1, res);
+  if (orientation === 'p2') res = mult(-1, res);
   res = cellrelToCell(variant, res);
 
   return isCell(variant, res) ? pos2key(res) : undefined;
